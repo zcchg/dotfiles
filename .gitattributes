@@ -1,0 +1,10 @@
+# zsh
+.zshenv linguist-language=zsh
+.zshrc linguist-language=zsh
+
+# git
+.config/git/config linguist-language=gitconfig
+.config/git/ignore linguist-language=gitignore
+
+# postgres
+.psqlrc linguist-language=pgsql

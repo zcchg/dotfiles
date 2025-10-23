@@ -1,0 +1,38 @@
+theme = dark:custom-dark,light:custom-light
+
+window-position-x = 8
+window-position-y = 8
+window-padding-x = 6
+window-padding-y = 7
+resize-overlay = never
+quit-after-last-window-closed = true
+quit-after-last-window-closed-delay = 5m
+
+# macos
+# font-family = SF Mono
+# font-style = Regular
+# font-family = SF Mono
+# font-style = SemiBold
+# font-size = 14
+# adjust-cell-height = 20%
+
+# linux
+font-family = IBM Plex Mono
+font-style = Text
+font-family-bold = IBM Plex Mono
+font-style-bold = SemiBold
+font-size = 11
+adjust-cell-height = 7.5%
+
+shell-integration-features = no-title,no-cursor
+cursor-style = block
+cursor-style-blink = false
+scrollback-limit = 10_000_000
+bell-features = no-title
+app-notifications = no-clipboard-copy
+
+link-url = false
+clipboard-paste-protection = false
+keybind = cmd+period=text:\x03
+keybind = ctrl+shift+l=clear_screen
+

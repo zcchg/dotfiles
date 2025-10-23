@@ -1,0 +1,36 @@
+[core]
+	autocrlf = input
+
+[init]
+	defaultBranch = main
+	templateDir = /dev/null
+
+[advice]
+	statusHints = off
+
+[color "status"]
+	untracked = dim
+
+[alias]
+	a    = add
+	br   = branch
+	ci   = commit
+	co   = checkout
+	d    = diff
+	ds   = diff --staged
+	re   = rebase
+	rec  = rebase --continue
+	s    = status
+	st   = status --untracked-files=no
+	l    = log --format='%C(auto)%h %C(green)%<|(23)%ar%C(auto) %s %C(blue)%an%C(auto)%d'
+	ll   = log --format=fuller
+	last = show --summary --format=fuller --name-status
+
+	# prepend commits from another branch
+	# specify a branch name as the arg, such as origin/main
+	prepend-commits-from = rebase \
+		--interactive --rebase-merges --committer-date-is-author-date \
+		--exec 'git commit --amend --no-edit --reset-author'
+
+[include]
+	path = ~/.config/git/custom

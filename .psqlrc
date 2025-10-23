@@ -1,0 +1,12 @@
+\x auto
+
+\set QUIET 1
+
+\timing on
+\set VERBOSITY verbose
+\set COMP_KEYWORD_CASE upper
+\pset border 2
+\pset linestyle unicode
+\pset null ␀
+
+\unset QUIET

@@ -1,0 +1,39 @@
+# first, ignore everything:
+*
+
+# then, allow directories:
+!*/
+
+# but ignore the git directory:
+.git/
+
+# finally, allow files individually:
+
+# this repository
+!README.md
+!LICENSE
+!Makefile
+!.gitattributes
+!.gitignore
+
+# zsh
+!.zshenv
+!.zshrc
+
+# vim
+!.vimrc
+
+# git
+!.config/git/config
+!.config/git/ignore
+
+# postgres
+!.psqlrc
+
+# ghostty
+!.config/ghostty/config
+!.config/ghostty/themes/custom-dark
+!.config/ghostty/themes/custom-light
+
+# zed
+!.config/zed/settings.json

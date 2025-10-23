@@ -1,0 +1,22 @@
+{
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+  "ui_font_size": 15.0,
+  "ui_font_family": "SF Mono",
+  "buffer_font_size": 13.5,
+  "buffer_font_family": "SF Mono",
+  "cursor_blink": false,
+  "helix_mode": true,
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  }
+}
