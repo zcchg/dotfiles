@@ -1,0 +1,42 @@
+theme = dark:custom-dark,light:custom-light
+
+window-padding-x = 6
+window-padding-y = 7
+window-padding-balance = true
+window-padding-color = extend-always
+resize-overlay = never
+quit-after-last-window-closed = true
+quit-after-last-window-closed-delay = 5m
+
+font-family = SF Mono
+font-style = Medium
+font-family-bold = SF Mono
+font-style-bold = SemiBold
+font-family-italic = SF Mono
+font-style-italic = Medium
+font-family-bold-italic = SF Mono
+font-style-bold-italic = SemiBold
+font-size = 11
+adjust-cell-height = 25%
+
+shell-integration-features = no-title,no-cursor
+cursor-style = block
+cursor-style-blink = false
+scrollback-limit = 10_000_000
+bell-features = no-title
+app-notifications = no-clipboard-copy
+
+link-url = false
+clipboard-paste-protection = false
+keybind = cmd+period=text:\x03
+
+# linux keybinding overrides
+keybind = cmd+n=new_window
+keybind = cmd+t=new_tab
+keybind = cmd+l=clear_screen
+keybind = cmd+c=copy_to_clipboard
+keybind = cmd+v=paste_from_clipboard
+
+gtk-opengl-debug = false
+
+#config-file = ?macos
