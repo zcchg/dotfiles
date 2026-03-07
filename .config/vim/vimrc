@@ -1,0 +1,35 @@
+" vim settings
+  set hidden undofile
+  set viminfo='10,<100,s100,:100,f0,h
+  let &viminfofile=expand('~/.cache/vim').'/viminfo'
+  let g:loaded_netrw=1 | let g:loaded_netrwPlugin=1
+
+" indentation
+  filetype plugin indent on
+  augroup UserIndentationFunctions
+    autocmd!
+    autocmd BufNewFile,BufReadPost * if &l:ft ==# '' | setlocal ts=2 sw=0 sts=0 et | endif
+    autocmd FileType * setlocal formatoptions-=cro " don't continue comment on the next line
+    autocmd FileType text,markdown,sh,zsh,css,javascript,html,xml,conf,dosini,json,lua,toml,vim
+      \ setlocal ts=2 sw=0 sts=0 et
+  augroup END
+
+" keys, layout, search
+  set timeoutlen=250                        " key timeout
+  set scrolloff=5                           " show 5 surrounding lines while scrolling
+  set number cursorline                     " show the number column and highlight the current line
+  set laststatus=2 statusline=%f%=%c\ %l/%L " filename, spacer, position, current line/line count
+  set hlsearch ignorecase smartcase         " highlight all search matches
+
+" theme
+  try | colorscheme yin | endtry
+
+" save and restore functions (forbid invalid filenames, strip whitespace, restore cursor position)
+  augroup UserFileFunctions
+    autocmd!
+    autocmd BufWritePre *
+      \ if expand('%:t') =~# '^["'':;]' | throw 'Forbidden filename: ' .. expand('%') | endif
+      \ | let b:view = winsaveview() | %s/\s\+$//e | call winrestview(b:view) | unlet b:view
+    autocmd BufReadPost * let last = line('''"') |
+      \ if last > 0 && last <= line('$') && &ft !~# 'commit' | exe 'normal! g`"' | endif
+  augroup END
